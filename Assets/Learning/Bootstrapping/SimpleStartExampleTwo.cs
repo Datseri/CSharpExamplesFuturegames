@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 [DefaultExecutionOrder(-1)]
 public class SimpleStartExampleTwo : MonoBehaviour, IService {
@@ -16,12 +17,13 @@ public class SimpleStartExampleTwo : MonoBehaviour, IService {
         monoServiceTwo = Instantiate(monoServiceTwoPrefab, simpleStartGameObject.transform); // it automatically implies creates the object and adds the component
 
         ServiceLocator.Instance.RegisterService(this);
-        DontDestroyOnLoad(gameObject);
     }
 
     public void Initialize() {
         ServiceLocator.Instance.RegisterService(monoServiceOne);
         ServiceLocator.Instance.RegisterService(monoServiceTwo);
+
+        var myStartInstance = ServiceLocator.Instance.GetService<SimpleStartExampleTwo>();
     }
     public void Dispose() {
         ServiceLocator.Instance.RemoveService<MonoServiceOne>();

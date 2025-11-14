@@ -15,7 +15,7 @@ public class MonoServiceTwo : MonoBehaviour, IService {
     }
 
     private void Update() {
-        SimpleStart.Instance?.monoServiceOne.cubeTransform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
+        SimpleStartExampleOne.Instance?.monoServiceOne.cubeTransform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
         if(serviceLocatorInitialized) {
             ServiceLocator.Instance?.GetService<MonoServiceOne>()?.cubeTransform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
         }

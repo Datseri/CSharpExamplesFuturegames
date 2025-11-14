@@ -10,5 +10,11 @@ internal static class GameData {
     public static bool gameIsOver = false;
     public static bool isLoading = false;
     public static bool showFPS = true;
+    public static bool godMode = false;
+    public static int score = 0;
+    public static int highScore = 0;
+    public static float mouseSensitivity = 2f;
 
 }
+
+

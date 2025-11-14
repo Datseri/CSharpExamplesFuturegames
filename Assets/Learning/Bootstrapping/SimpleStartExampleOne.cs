@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-public class SimpleStart : MonoBehaviour {
+public class SimpleStartExampleOne : MonoBehaviour {
     public MonoServiceOne monoServiceOne;
     public MonoServiceTwo monoServiceTwo;
-    public static SimpleStart Instance { get; set; }
+    public static SimpleStartExampleOne Instance { get; set; }
 
     private void Awake() {
         if (Instance != null && Instance != this) {

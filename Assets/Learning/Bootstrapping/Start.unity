@@ -507,6 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4870d40dc4286f042a660325e94ac647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: fg.2025::Cube
+  meshRenderer: {fileID: 1343010921}
 --- !u!1 &1460330165
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1460330167
 Transform:
   m_ObjectHideFlags: 0

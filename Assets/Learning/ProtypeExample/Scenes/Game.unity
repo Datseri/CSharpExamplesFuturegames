@@ -383,6 +383,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &313661041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313661043}
+  - component: {fileID: 313661042}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &313661042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313661041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23de05d3877440ea2a201f6042f49e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: fg.2025.prototype::Learning.Prototype.EnemySpawner
+  enemyPrefab: {fileID: -4867999944586841285, guid: 58abe47800503da4596ffc4733ca25ff, type: 3}
+  spawnPoints:
+  - {fileID: 244495314}
+  - {fileID: 2059716274}
+  - {fileID: 752667847}
+  - {fileID: 1091378591}
+  enemies: []
+--- !u!4 &313661043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313661041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &333458953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,6 +2158,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1586124067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586124069}
+  - component: {fileID: 1586124068}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1586124068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586124067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bcd69a5d7bb4b898205805fb5502e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: fg.2025.prototype::Learning.Prototype.InputManager
+--- !u!4 &1586124069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586124067}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1631711099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,30 +2246,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1269655b919b0b14daaa85e812a62663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: fg.2025.prototype::GameManager
-  cameraControl: {fileID: 1980595386}
-  player: {fileID: 1708594481}
-  enemyPrefab: {fileID: -4867999944586841285, guid: 58abe47800503da4596ffc4733ca25ff, type: 3}
   bulletPrefab: {fileID: 5839397040550042045, guid: 50efa4966ad409144b86447db845010f, type: 3}
-  explosionPrefab: {fileID: 0}
-  jumpSound: {fileID: 0}
-  shootSound: {fileID: 0}
-  dieSound: {fileID: 0}
-  musicSource: {fileID: 0}
   scoreText: {fileID: 275568245}
   livesText: {fileID: 196194718670673979}
   weaponText: {fileID: 663770860}
   ammoText: {fileID: 1323167947}
   highScoreText: {fileID: 732112156}
-  volumeSlider: {fileID: 0}
-  pausePanel: {fileID: 0}
-  gameOverPanel: {fileID: 0}
-  victoryPanel: {fileID: 0}
-  spawnPoints:
-  - {fileID: 244495314}
-  - {fileID: 2059716274}
-  - {fileID: 752667847}
-  - {fileID: 1091378591}
-  enemies: []
+  lives: 3
 --- !u!1 &1631899677
 GameObject:
   m_ObjectHideFlags: 0
@@ -2397,17 +2475,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1708594481 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8648578235378176875, guid: fbcdc2bead69ab24bb33980ab93dfc23, type: 3}
-  m_PrefabInstance: {fileID: 6368745941671475833}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9739e0043665bcd4594a40b84df2f333, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: fg.2025.prototype::Player
 --- !u!1 &1712031985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,3 +3450,5 @@ SceneRoots:
   - {fileID: 1005027113}
   - {fileID: 1994986771}
   - {fileID: 2053228657}
+  - {fileID: 1586124069}
+  - {fileID: 313661043}

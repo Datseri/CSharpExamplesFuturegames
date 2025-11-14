@@ -8,6 +8,40 @@ public interface IService {
     public void Dispose();
 }
 
+public class MyClass : IService {
+
+    public void Initialize() {
+    }
+    public void Dispose() {
+    }
+}
+
+public class MyOtherClass : IService {
+
+    public void Initialize() {
+    }
+    public void Dispose() {
+    }
+}
+
+public class TestClass{
+
+    List<IService> services = new List<IService>();
+
+    public void Test() {
+        var instanceOne  = new MyClass();
+        var instanceTwo = new MyOtherClass();
+
+        services.Add(instanceOne);
+        services.Add(instanceTwo);
+
+        foreach(var service in services) {
+            service.Initialize();
+        }
+    }
+
+}
+
 /// <summary>
 /// Generic Service Locator which is a singleton.
 /// </summary>

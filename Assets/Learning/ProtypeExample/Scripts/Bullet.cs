@@ -1,16 +1,16 @@
+using System;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+public class Bullet : MonoBehaviour {
+    private Rigidbody rb;
+    [SerializeField] private float bulletSpeed = 20f;
+
+
+    private void Awake() {
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Start() {
+        rb.linearVelocity = transform.right * bulletSpeed;
     }
 }
