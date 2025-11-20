@@ -5,7 +5,8 @@
         "Unity.InputSystem",
         "Unity.TextMeshPro",
         "com.intothedev.savesystem",
-        "Unity.Addressables"
+        "Unity.Addressables",
+        "Unity.ResourceManager"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
